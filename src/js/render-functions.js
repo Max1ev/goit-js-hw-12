@@ -23,10 +23,10 @@ export function createGallery(images) {
           <img src="${webformatURL}" alt="${tags}" loading="lazy"/>
         </a>
         <div class="meta">
-          <div><b>Likes</b> ${' ' + likes}</div>
-          <div><b>Views</b> ${' ' + views}</div>
-          <div><b>Comments</b> ${' ' + comments}</div>
-          <div><b>Downloads</b> ${' ' + downloads}</div>
+          <div><b>Likes</b>${likes}</div>
+          <div><b>Views</b>${views}</div>
+          <div><b>Comments</b>${comments}</div>
+          <div><b>Downloads</b>${downloads}</div>
         </div>
       </li>`
     )
