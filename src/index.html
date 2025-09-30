@@ -12,7 +12,7 @@
         <input
           id="search-text"
           type="text"
-          name="search-text"
+          name="search"
           placeholder="Search images..."
           required
         />
@@ -24,12 +24,20 @@
 
 
       <ul class="gallery" id="gallery"></ul>
-    </div>
 
 
-    <div class="loader-backdrop is-hidden" id="loader">
-      <span class="loader"></span>
+      <div class="controls">
+        <button class="load-more is-hidden" data-load-more>Load more</button>
+
+
+        <p id="bottom-status" class="status-message"></p>
+
+        <div class="loader-backdrop is-hidden" id="loader" data-loader>
+          <span class="loader"></span>
+        </div>
+      </div>
     </div>
+
 
     <script type="module" src="./main.js"></script>
   </body>

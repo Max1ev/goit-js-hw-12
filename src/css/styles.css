@@ -43,14 +43,15 @@ body {
 
 .status-message {
   text-align: center;
-  margin: 4px 0 16px;
+  margin: 6px 0 20px;
   font-size: 14px;
-  min-height: 18px;
+  font-weight: 500;
+  color: #2e2f42;
+  min-height: 20px;
 }
 .status-message.loading {
   color: #4e75ff;
 }
-
 
 .gallery {
   display: grid;
@@ -97,23 +98,86 @@ body {
   display: block;
 }
 
+
 .meta {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 10px;
   gap: 8px;
   font-size: 12px;
   color: #434455;
   border-top: 1px solid #e7e9fc;
 }
-
+.meta li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.meta span {
+  color: #777;
+  font-size: 11px;
+}
 .meta b {
-  display: block;
-  font-size: 12px;
+  font-size: 13px;
   color: #2e2f42;
 }
 
 
+.controls {
+  display: grid;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.load-more {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4e75ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-more:hover {
+  background: #6c8cff;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+
+.loader-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #ddd;
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.iziToast {
+  font-size: 13px !important;
+  max-width: 280px !important;
+}
 .iziToast.iziToast-color-red {
   background: #ff4e4e;
   color: #fff;
