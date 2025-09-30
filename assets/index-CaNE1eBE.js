@@ -17,10 +17,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           <img src="${n}" alt="${r}" loading="lazy"/>
         </a>
         <div class="meta">
-          <div><b>Likes</b> ${" "+l}</div>
-          <div><b>Views</b> ${" "+d}</div>
-          <div><b>Comments</b> ${" "+g}</div>
-          <div><b>Downloads</b> ${" "+N}</div>
+          <div><b>Likes</b>${l}</div>
+          <div><b>Views</b>${d}</div>
+          <div><b>Comments</b>${g}</div>
+          <div><b>Downloads</b>${N}</div>
         </div>
       </li>`).join("");Et.insertAdjacentHTML("beforeend",o),sn.refresh()}function ln(){Ot.classList.remove("is-hidden")}function cn(){Ot.classList.add("is-hidden")}const dn=document.getElementById("search-form"),fn=document.getElementById("search-text"),fe=document.getElementById("status-message");dn.addEventListener("submit",pn);function un(){fe.textContent="Loading images, please wait...",fe.className="status-message loading"}function we(){fe.textContent="",fe.className="status-message"}function pn(t){t.preventDefault();const o=fn.value.trim();if(!o){se.warning({title:"Oops",message:"Please type something to search.",position:"topRight",maxWidth:300,timeout:1500});return}rn(),ln(),un(),on(o).then(n=>{const i=Array.isArray(n==null?void 0:n.hits)?n.hits:[];if(i.length===0){we(),se.error({title:"No results",message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight",maxWidth:300,timeout:2e3});return}an(i),we(),se.success({title:"Success",message:`Found ${i.length} images`,position:"topRight",maxWidth:300,timeout:1500})}).catch(n=>{console.error(n),we(),se.error({title:"Error",message:"Something went wrong. Please, try again later.",position:"topRight",maxWidth:300,timeout:2e3})}).finally(()=>{cn()})}
-//# sourceMappingURL=index-CYbuYs7_.js.map
+//# sourceMappingURL=index-CaNE1eBE.js.map
